@@ -5,7 +5,7 @@ PACKAGE=com.metasploit.stage
 all: android java
 
 android:
-		mvn package -Dandroid.sdk.path=${ANDROID_HOME} -Dandroid.ndk.path=${ANDROID_NDK_HOME} -Dandroid.release=true -P deploy -DskipTests
+		mvn package -Dandroid.sdk.path=${ANDROID_HOME} -Dandroid.ndk.path=${ANDROID_NDK_HOME} -Dandroid.release=true -P deploy -DskipTests -Dmaven.test.skip=true
 
 java:
 		mvn package
