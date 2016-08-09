@@ -9,13 +9,13 @@
 		<version>1-SNAPSHOT</version>
 	</parent>
 	<packaging>jar</packaging>
-	<name>JavaPayload Compatibility Checks (Android API 10)</name>
+	<name>JavaPayload Compatibility Checks (Android API 15)</name>
 	<url>http://www.metasploit.com/</url>
 	<dependencies>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
-			<version>2.3.3</version>
+			<version>4.0.3</version>
 		</dependency>
 	</dependencies>
 	<build>
