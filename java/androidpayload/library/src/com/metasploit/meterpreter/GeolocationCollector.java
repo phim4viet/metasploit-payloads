@@ -17,8 +17,6 @@ import java.util.List;
 public class GeolocationCollector extends IntervalCollector  {
 
     private final Object syncObject = new Object();
-    protected LocationManager mLocationManager;
-    public Location mLocationObj;
     private Hashtable<Long, GeoModel> collections = null;
 
     private class GeoModel {
@@ -53,14 +51,11 @@ public class GeolocationCollector extends IntervalCollector  {
     public GeolocationCollector(int collectorId, Context context, long timeout) {
         super(collectorId, context, timeout);
         this.collections = new Hashtable<Long, GeoModel>();
-        mLocationManager = (LocationManager) AndroidMeterpreter.getContext()
-          .getSystemService(Context.LOCATION_SERVICE);
     }
 
     public GeolocationCollector(int collectorId, Context context) {
         super(collectorId, context);
         this.collections = new Hashtable<Long, GeoModel>();
-        mLocationManager = (LocationManager) AndroidMeterpreter.getContext().getSystemService(Context.LOCATION_SERVICE);
     }
 
     protected void init() { }
@@ -69,7 +64,7 @@ public class GeolocationCollector extends IntervalCollector  {
 
     protected boolean collect(DataOutputStream output) throws IOException {
 
-        Location location = mLocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        Location location = LocationUtils.getLastLocation(AndroidMeterpreter.getContext());
         GeoModel lGeoMod = new GeoModel();
 
         lGeoMod.setLocation(location);
