@@ -36,10 +36,11 @@ RUN echo y | /usr/local/android-sdk/tools/android update sdk --filter tools --no
 RUN echo y | /usr/local/android-sdk/tools/android update sdk --filter platform-tools --no-ui -a
 RUN echo y | /usr/local/android-sdk/tools/android update sdk --filter build-tools-23.0.0 --no-ui -a
 RUN echo y | /usr/local/android-sdk/tools/android update sdk --filter android-10 --no-ui -a
+RUN echo y | /usr/local/android-sdk/tools/android update sdk --filter android-19 --no-ui -a
 RUN echo y | /usr/local/android-sdk/tools/android update sdk --filter android-3 --no-ui -a
 
 # Pre-cache Maven artifacts
-RUN git clone https://github.com/rapid7/metasploit-payloads.git && \
+RUN git clone https://github.com/timwr/metasploit-payloads.git && \
 	cd metasploit-payloads/java && make && cd .. && rm -fr metasploit-payloads
 
 ENV ANDROID_HOME /usr/local/android-sdk
