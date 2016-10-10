@@ -120,6 +120,8 @@ public class CommandManager {
         String method = request.getStringValue(TLVType.TLV_TYPE_METHOD);
         Command cmd = this.getCommand(method);
 
+        System.err.println("method " + method);
+
         int result;
         try {
             result = cmd.execute(met, request, response);

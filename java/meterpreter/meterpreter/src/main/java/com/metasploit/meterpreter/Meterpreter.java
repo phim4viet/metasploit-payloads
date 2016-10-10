@@ -162,13 +162,15 @@ public class Meterpreter {
         this.loadExtensions = loadExtensions;
         this.commandManager = new CommandManager();
         this.channels.add(null); // main communication channel?
-        if (redirectErrors) {
+        System.err.println("redirect " + redirectErrors);
+        if (false) {
             errBuffer = new ByteArrayOutputStream();
             err = new PrintStream(errBuffer);
         } else {
             errBuffer = null;
             err = System.err;
         }
+        err.println("error");
 
         if (beginExecution) {
 

