@@ -9,27 +9,22 @@
 /* Begin PBXBuildFile section */
 		A51734AC1E724A2C007DEA9E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734AB1E724A2C007DEA9E /* AVFoundation.framework */; };
 		A51734AE1E724A47007DEA9E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734AD1E724A47007DEA9E /* CoreMedia.framework */; };
-		A51734CD1E742D8B007DEA9E /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C31E742D8B007DEA9E /* libcurl.a */; };
-		A51734CE1E742D8B007DEA9E /* libdnet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C41E742D8B007DEA9E /* libdnet.a */; };
-		A51734CF1E742D8B007DEA9E /* libeio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C51E742D8B007DEA9E /* libeio.a */; };
-		A51734D01E742D8B007DEA9E /* libev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C61E742D8B007DEA9E /* libev.a */; };
-		A51734D11E742D8B007DEA9E /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C71E742D8B007DEA9E /* libmbedcrypto.a */; };
-		A51734D21E742D8B007DEA9E /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C81E742D8B007DEA9E /* libmbedtls.a */; };
-		A51734D31E742D8B007DEA9E /* libmbedx509.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C91E742D8B007DEA9E /* libmbedx509.a */; };
-		A51734D41E742D8B007DEA9E /* libmettle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734CA1E742D8B007DEA9E /* libmettle.a */; };
-		A51734D51E742D8B007DEA9E /* libsigar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734CB1E742D8B007DEA9E /* libsigar.a */; };
-		A51734D61E742D8B007DEA9E /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734CC1E742D8B007DEA9E /* libz.a */; };
-		A5FD5E771E813FD8002CE468 /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6C1E813FD8002CE468 /* libmbedcrypto.a */; };
-		A5FD5E781E813FD8002CE468 /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6D1E813FD8002CE468 /* libmbedtls.a */; };
-		A5FD5E791E813FD8002CE468 /* libmbedx509.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6E1E813FD8002CE468 /* libmbedx509.a */; };
-		A5FD5E7A1E813FD8002CE468 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6F1E813FD8002CE468 /* libz.a */; };
-		A5FD5E7B1E813FD8002CE468 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E701E813FD8002CE468 /* libcurl.a */; };
-		A5FD5E7C1E813FD8002CE468 /* libcurl.la in Resources */ = {isa = PBXBuildFile; fileRef = A5FD5E711E813FD8002CE468 /* libcurl.la */; };
-		A5FD5E7D1E813FD8002CE468 /* libeio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E721E813FD8002CE468 /* libeio.a */; };
-		A5FD5E7E1E813FD8002CE468 /* libev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E731E813FD8002CE468 /* libev.a */; };
-		A5FD5E7F1E813FD8002CE468 /* libsigar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E741E813FD8002CE468 /* libsigar.a */; };
-		A5FD5E801E813FD8002CE468 /* libdnet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E751E813FD8002CE468 /* libdnet.a */; };
-		A5FD5E811E813FD8002CE468 /* libmettle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E761E813FD8002CE468 /* libmettle.a */; };
+		A536A4171EC7029B0074C3B7 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A4071EC7029B0074C3B7 /* libcurl.a */; };
+		A536A4181EC7029B0074C3B7 /* libcurl.la in Resources */ = {isa = PBXBuildFile; fileRef = A536A4081EC7029B0074C3B7 /* libcurl.la */; };
+		A536A4191EC7029B0074C3B7 /* libdnet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A4091EC7029B0074C3B7 /* libdnet.a */; };
+		A536A41A1EC7029B0074C3B7 /* libdnet.la in Resources */ = {isa = PBXBuildFile; fileRef = A536A40A1EC7029B0074C3B7 /* libdnet.la */; };
+		A536A41B1EC7029B0074C3B7 /* libeio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A40B1EC7029B0074C3B7 /* libeio.a */; };
+		A536A41C1EC7029B0074C3B7 /* libeio.la in Resources */ = {isa = PBXBuildFile; fileRef = A536A40C1EC7029B0074C3B7 /* libeio.la */; };
+		A536A41D1EC7029B0074C3B7 /* libev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A40D1EC7029B0074C3B7 /* libev.a */; };
+		A536A41E1EC7029B0074C3B7 /* libev.la in Resources */ = {isa = PBXBuildFile; fileRef = A536A40E1EC7029B0074C3B7 /* libev.la */; };
+		A536A41F1EC7029B0074C3B7 /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A40F1EC7029B0074C3B7 /* libmbedcrypto.a */; };
+		A536A4201EC7029B0074C3B7 /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A4101EC7029B0074C3B7 /* libmbedtls.a */; };
+		A536A4211EC7029B0074C3B7 /* libmbedx509.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A4111EC7029B0074C3B7 /* libmbedx509.a */; };
+		A536A4221EC7029B0074C3B7 /* libmettle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A4121EC7029B0074C3B7 /* libmettle.a */; };
+		A536A4231EC7029B0074C3B7 /* libmettle.la in Resources */ = {isa = PBXBuildFile; fileRef = A536A4131EC7029B0074C3B7 /* libmettle.la */; };
+		A536A4241EC7029B0074C3B7 /* libsigar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A4141EC7029B0074C3B7 /* libsigar.a */; };
+		A536A4251EC7029B0074C3B7 /* libsigar.la in Resources */ = {isa = PBXBuildFile; fileRef = A536A4151EC7029B0074C3B7 /* libsigar.la */; };
+		A536A4261EC7029B0074C3B7 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536A4161EC7029B0074C3B7 /* libz.a */; };
 		A5FE77CD1E5553F00091F74C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE77CC1E5553F00091F74C /* main.m */; };
 		A5FE77D01E5553F00091F74C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE77CF1E5553F00091F74C /* AppDelegate.m */; };
 		A5FE77D31E5553F00091F74C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE77D21E5553F00091F74C /* ViewController.m */; };
@@ -41,27 +36,22 @@
 /* Begin PBXFileReference section */
 		A51734AB1E724A2C007DEA9E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A51734AD1E724A47007DEA9E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		A51734C31E742D8B007DEA9E /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libcurl.a"; sourceTree = "<group>"; };
-		A51734C41E742D8B007DEA9E /* libdnet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdnet.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libdnet.a"; sourceTree = "<group>"; };
-		A51734C51E742D8B007DEA9E /* libeio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libeio.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libeio.a"; sourceTree = "<group>"; };
-		A51734C61E742D8B007DEA9E /* libev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libev.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libev.a"; sourceTree = "<group>"; };
-		A51734C71E742D8B007DEA9E /* libmbedcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedcrypto.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmbedcrypto.a"; sourceTree = "<group>"; };
-		A51734C81E742D8B007DEA9E /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmbedtls.a"; sourceTree = "<group>"; };
-		A51734C91E742D8B007DEA9E /* libmbedx509.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedx509.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmbedx509.a"; sourceTree = "<group>"; };
-		A51734CA1E742D8B007DEA9E /* libmettle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmettle.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmettle.a"; sourceTree = "<group>"; };
-		A51734CB1E742D8B007DEA9E /* libsigar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsigar.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libsigar.a"; sourceTree = "<group>"; };
-		A51734CC1E742D8B007DEA9E /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libz.a"; sourceTree = "<group>"; };
-		A5FD5E6C1E813FD8002CE468 /* libmbedcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedcrypto.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmbedcrypto.a"; sourceTree = "<group>"; };
-		A5FD5E6D1E813FD8002CE468 /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmbedtls.a"; sourceTree = "<group>"; };
-		A5FD5E6E1E813FD8002CE468 /* libmbedx509.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedx509.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmbedx509.a"; sourceTree = "<group>"; };
-		A5FD5E6F1E813FD8002CE468 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libz.a"; sourceTree = "<group>"; };
-		A5FD5E701E813FD8002CE468 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libcurl.a"; sourceTree = "<group>"; };
-		A5FD5E711E813FD8002CE468 /* libcurl.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libcurl.la; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libcurl.la"; sourceTree = "<group>"; };
-		A5FD5E721E813FD8002CE468 /* libeio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libeio.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libeio.a"; sourceTree = "<group>"; };
-		A5FD5E731E813FD8002CE468 /* libev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libev.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libev.a"; sourceTree = "<group>"; };
-		A5FD5E741E813FD8002CE468 /* libsigar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsigar.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libsigar.a"; sourceTree = "<group>"; };
-		A5FD5E751E813FD8002CE468 /* libdnet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdnet.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libdnet.a"; sourceTree = "<group>"; };
-		A5FD5E761E813FD8002CE468 /* libmettle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmettle.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmettle.a"; sourceTree = "<group>"; };
+		A536A4071EC7029B0074C3B7 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libcurl.a"; sourceTree = "<group>"; };
+		A536A4081EC7029B0074C3B7 /* libcurl.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libcurl.la; path = "../../mettle/build/aarch64-iphone-darwin/lib/libcurl.la"; sourceTree = "<group>"; };
+		A536A4091EC7029B0074C3B7 /* libdnet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdnet.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libdnet.a"; sourceTree = "<group>"; };
+		A536A40A1EC7029B0074C3B7 /* libdnet.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libdnet.la; path = "../../mettle/build/aarch64-iphone-darwin/lib/libdnet.la"; sourceTree = "<group>"; };
+		A536A40B1EC7029B0074C3B7 /* libeio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libeio.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libeio.a"; sourceTree = "<group>"; };
+		A536A40C1EC7029B0074C3B7 /* libeio.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libeio.la; path = "../../mettle/build/aarch64-iphone-darwin/lib/libeio.la"; sourceTree = "<group>"; };
+		A536A40D1EC7029B0074C3B7 /* libev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libev.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libev.a"; sourceTree = "<group>"; };
+		A536A40E1EC7029B0074C3B7 /* libev.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libev.la; path = "../../mettle/build/aarch64-iphone-darwin/lib/libev.la"; sourceTree = "<group>"; };
+		A536A40F1EC7029B0074C3B7 /* libmbedcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedcrypto.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libmbedcrypto.a"; sourceTree = "<group>"; };
+		A536A4101EC7029B0074C3B7 /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libmbedtls.a"; sourceTree = "<group>"; };
+		A536A4111EC7029B0074C3B7 /* libmbedx509.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedx509.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libmbedx509.a"; sourceTree = "<group>"; };
+		A536A4121EC7029B0074C3B7 /* libmettle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmettle.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libmettle.a"; sourceTree = "<group>"; };
+		A536A4131EC7029B0074C3B7 /* libmettle.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libmettle.la; path = "../../mettle/build/aarch64-iphone-darwin/lib/libmettle.la"; sourceTree = "<group>"; };
+		A536A4141EC7029B0074C3B7 /* libsigar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsigar.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libsigar.a"; sourceTree = "<group>"; };
+		A536A4151EC7029B0074C3B7 /* libsigar.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libsigar.la; path = "../../mettle/build/aarch64-iphone-darwin/lib/libsigar.la"; sourceTree = "<group>"; };
+		A536A4161EC7029B0074C3B7 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = "../../mettle/build/aarch64-iphone-darwin/lib/libz.a"; sourceTree = "<group>"; };
 		A5FE77C81E5553F00091F74C /* payload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = payload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FE77CC1E5553F00091F74C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5FE77CE1E5553F00091F74C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,28 +69,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51734CD1E742D8B007DEA9E /* libcurl.a in Frameworks */,
-				A51734CE1E742D8B007DEA9E /* libdnet.a in Frameworks */,
-				A5FD5E771E813FD8002CE468 /* libmbedcrypto.a in Frameworks */,
-				A5FD5E7E1E813FD8002CE468 /* libev.a in Frameworks */,
-				A51734CF1E742D8B007DEA9E /* libeio.a in Frameworks */,
-				A51734D01E742D8B007DEA9E /* libev.a in Frameworks */,
-				A5FD5E7F1E813FD8002CE468 /* libsigar.a in Frameworks */,
-				A51734D11E742D8B007DEA9E /* libmbedcrypto.a in Frameworks */,
-				A5FD5E801E813FD8002CE468 /* libdnet.a in Frameworks */,
-				A5FD5E7A1E813FD8002CE468 /* libz.a in Frameworks */,
-				A51734D21E742D8B007DEA9E /* libmbedtls.a in Frameworks */,
-				A5FD5E781E813FD8002CE468 /* libmbedtls.a in Frameworks */,
-				A51734D31E742D8B007DEA9E /* libmbedx509.a in Frameworks */,
-				A5FD5E7B1E813FD8002CE468 /* libcurl.a in Frameworks */,
-				A51734D41E742D8B007DEA9E /* libmettle.a in Frameworks */,
-				A51734D51E742D8B007DEA9E /* libsigar.a in Frameworks */,
-				A5FD5E811E813FD8002CE468 /* libmettle.a in Frameworks */,
-				A5FD5E7D1E813FD8002CE468 /* libeio.a in Frameworks */,
-				A5FD5E791E813FD8002CE468 /* libmbedx509.a in Frameworks */,
-				A51734D61E742D8B007DEA9E /* libz.a in Frameworks */,
+				A536A41D1EC7029B0074C3B7 /* libev.a in Frameworks */,
 				A51734AE1E724A47007DEA9E /* CoreMedia.framework in Frameworks */,
+				A536A4211EC7029B0074C3B7 /* libmbedx509.a in Frameworks */,
 				A51734AC1E724A2C007DEA9E /* AVFoundation.framework in Frameworks */,
+				A536A4191EC7029B0074C3B7 /* libdnet.a in Frameworks */,
+				A536A41F1EC7029B0074C3B7 /* libmbedcrypto.a in Frameworks */,
+				A536A4261EC7029B0074C3B7 /* libz.a in Frameworks */,
+				A536A4201EC7029B0074C3B7 /* libmbedtls.a in Frameworks */,
+				A536A4171EC7029B0074C3B7 /* libcurl.a in Frameworks */,
+				A536A4221EC7029B0074C3B7 /* libmettle.a in Frameworks */,
+				A536A4241EC7029B0074C3B7 /* libsigar.a in Frameworks */,
+				A536A41B1EC7029B0074C3B7 /* libeio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,27 +90,22 @@
 		A5FE77BF1E5553F00091F74C = {
 			isa = PBXGroup;
 			children = (
-				A5FD5E6C1E813FD8002CE468 /* libmbedcrypto.a */,
-				A5FD5E6D1E813FD8002CE468 /* libmbedtls.a */,
-				A5FD5E6E1E813FD8002CE468 /* libmbedx509.a */,
-				A5FD5E6F1E813FD8002CE468 /* libz.a */,
-				A5FD5E701E813FD8002CE468 /* libcurl.a */,
-				A5FD5E711E813FD8002CE468 /* libcurl.la */,
-				A5FD5E721E813FD8002CE468 /* libeio.a */,
-				A5FD5E731E813FD8002CE468 /* libev.a */,
-				A5FD5E741E813FD8002CE468 /* libsigar.a */,
-				A5FD5E751E813FD8002CE468 /* libdnet.a */,
-				A5FD5E761E813FD8002CE468 /* libmettle.a */,
-				A51734C31E742D8B007DEA9E /* libcurl.a */,
-				A51734C41E742D8B007DEA9E /* libdnet.a */,
-				A51734C51E742D8B007DEA9E /* libeio.a */,
-				A51734C61E742D8B007DEA9E /* libev.a */,
-				A51734C71E742D8B007DEA9E /* libmbedcrypto.a */,
-				A51734C81E742D8B007DEA9E /* libmbedtls.a */,
-				A51734C91E742D8B007DEA9E /* libmbedx509.a */,
-				A51734CA1E742D8B007DEA9E /* libmettle.a */,
-				A51734CB1E742D8B007DEA9E /* libsigar.a */,
-				A51734CC1E742D8B007DEA9E /* libz.a */,
+				A536A4071EC7029B0074C3B7 /* libcurl.a */,
+				A536A4081EC7029B0074C3B7 /* libcurl.la */,
+				A536A4091EC7029B0074C3B7 /* libdnet.a */,
+				A536A40A1EC7029B0074C3B7 /* libdnet.la */,
+				A536A40B1EC7029B0074C3B7 /* libeio.a */,
+				A536A40C1EC7029B0074C3B7 /* libeio.la */,
+				A536A40D1EC7029B0074C3B7 /* libev.a */,
+				A536A40E1EC7029B0074C3B7 /* libev.la */,
+				A536A40F1EC7029B0074C3B7 /* libmbedcrypto.a */,
+				A536A4101EC7029B0074C3B7 /* libmbedtls.a */,
+				A536A4111EC7029B0074C3B7 /* libmbedx509.a */,
+				A536A4121EC7029B0074C3B7 /* libmettle.a */,
+				A536A4131EC7029B0074C3B7 /* libmettle.la */,
+				A536A4141EC7029B0074C3B7 /* libsigar.a */,
+				A536A4151EC7029B0074C3B7 /* libsigar.la */,
+				A536A4161EC7029B0074C3B7 /* libz.a */,
 				A51734AD1E724A47007DEA9E /* CoreMedia.framework */,
 				A51734AB1E724A2C007DEA9E /* AVFoundation.framework */,
 				A5FE77CA1E5553F00091F74C /* payload */,
@@ -229,8 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FE77DB1E5553F00091F74C /* LaunchScreen.storyboard in Resources */,
+				A536A4231EC7029B0074C3B7 /* libmettle.la in Resources */,
+				A536A41A1EC7029B0074C3B7 /* libdnet.la in Resources */,
+				A536A41C1EC7029B0074C3B7 /* libeio.la in Resources */,
+				A536A41E1EC7029B0074C3B7 /* libev.la in Resources */,
 				A5FE77D81E5553F00091F74C /* Assets.xcassets in Resources */,
-				A5FD5E7C1E813FD8002CE468 /* libcurl.la in Resources */,
+				A536A4181EC7029B0074C3B7 /* libcurl.la in Resources */,
+				A536A4251EC7029B0074C3B7 /* libsigar.la in Resources */,
 				A5FE77D61E5553F00091F74C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,13 +343,16 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"~/dev/git/mettle/mettle/src",
-					"~/dev/git/mettle/build/arm-iphone-darwin/include",
 					"~/dev/git/mettle/build/aarch64-iphone-darwin/include",
+					"~/dev/git/mettle/build/arm-iphone-darwin/include",
 				);
 				INFOPLIST_FILE = payload/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "~/dev/git/mettle/build/arm-iphone-darwin/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"~/dev/git/mettle/build/aarch64-iphone-darwin/lib",
+					"~/dev/git/mettle/build/arm-iphone-darwin/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = metasploit.payload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -386,13 +369,16 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"~/dev/git/mettle/mettle/src",
-					"~/dev/git/mettle/build/arm-iphone-darwin/include",
 					"~/dev/git/mettle/build/aarch64-iphone-darwin/include",
+					"~/dev/git/mettle/build/arm-iphone-darwin/include",
 				);
 				INFOPLIST_FILE = payload/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "~/dev/git/mettle/build/arm-iphone-darwin/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"~/dev/git/mettle/build/aarch64-iphone-darwin/lib",
+					"~/dev/git/mettle/build/arm-iphone-darwin/lib",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = metasploit.payload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
