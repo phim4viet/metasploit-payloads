@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A51734AC1E724A2C007DEA9E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734AB1E724A2C007DEA9E /* AVFoundation.framework */; };
+		A51734AE1E724A47007DEA9E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734AD1E724A47007DEA9E /* CoreMedia.framework */; };
+		A51734CD1E742D8B007DEA9E /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C31E742D8B007DEA9E /* libcurl.a */; };
+		A51734CE1E742D8B007DEA9E /* libdnet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C41E742D8B007DEA9E /* libdnet.a */; };
+		A51734CF1E742D8B007DEA9E /* libeio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C51E742D8B007DEA9E /* libeio.a */; };
+		A51734D01E742D8B007DEA9E /* libev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C61E742D8B007DEA9E /* libev.a */; };
+		A51734D11E742D8B007DEA9E /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C71E742D8B007DEA9E /* libmbedcrypto.a */; };
+		A51734D21E742D8B007DEA9E /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C81E742D8B007DEA9E /* libmbedtls.a */; };
+		A51734D31E742D8B007DEA9E /* libmbedx509.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734C91E742D8B007DEA9E /* libmbedx509.a */; };
+		A51734D41E742D8B007DEA9E /* libmettle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734CA1E742D8B007DEA9E /* libmettle.a */; };
+		A51734D51E742D8B007DEA9E /* libsigar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734CB1E742D8B007DEA9E /* libsigar.a */; };
+		A51734D61E742D8B007DEA9E /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A51734CC1E742D8B007DEA9E /* libz.a */; };
+		A5FD5E771E813FD8002CE468 /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6C1E813FD8002CE468 /* libmbedcrypto.a */; };
+		A5FD5E781E813FD8002CE468 /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6D1E813FD8002CE468 /* libmbedtls.a */; };
+		A5FD5E791E813FD8002CE468 /* libmbedx509.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6E1E813FD8002CE468 /* libmbedx509.a */; };
+		A5FD5E7A1E813FD8002CE468 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E6F1E813FD8002CE468 /* libz.a */; };
+		A5FD5E7B1E813FD8002CE468 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E701E813FD8002CE468 /* libcurl.a */; };
+		A5FD5E7C1E813FD8002CE468 /* libcurl.la in Resources */ = {isa = PBXBuildFile; fileRef = A5FD5E711E813FD8002CE468 /* libcurl.la */; };
+		A5FD5E7D1E813FD8002CE468 /* libeio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E721E813FD8002CE468 /* libeio.a */; };
+		A5FD5E7E1E813FD8002CE468 /* libev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E731E813FD8002CE468 /* libev.a */; };
+		A5FD5E7F1E813FD8002CE468 /* libsigar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E741E813FD8002CE468 /* libsigar.a */; };
+		A5FD5E801E813FD8002CE468 /* libdnet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E751E813FD8002CE468 /* libdnet.a */; };
+		A5FD5E811E813FD8002CE468 /* libmettle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD5E761E813FD8002CE468 /* libmettle.a */; };
+		A5FE77CD1E5553F00091F74C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE77CC1E5553F00091F74C /* main.m */; };
+		A5FE77D01E5553F00091F74C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE77CF1E5553F00091F74C /* AppDelegate.m */; };
+		A5FE77D31E5553F00091F74C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FE77D21E5553F00091F74C /* ViewController.m */; };
+		A5FE77D61E5553F00091F74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FE77D41E5553F00091F74C /* Main.storyboard */; };
+		A5FE77D81E5553F00091F74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5FE77D71E5553F00091F74C /* Assets.xcassets */; };
+		A5FE77DB1E5553F00091F74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FE77D91E5553F00091F74C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A51734AB1E724A2C007DEA9E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A51734AD1E724A47007DEA9E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A51734C31E742D8B007DEA9E /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libcurl.a"; sourceTree = "<group>"; };
+		A51734C41E742D8B007DEA9E /* libdnet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdnet.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libdnet.a"; sourceTree = "<group>"; };
+		A51734C51E742D8B007DEA9E /* libeio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libeio.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libeio.a"; sourceTree = "<group>"; };
+		A51734C61E742D8B007DEA9E /* libev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libev.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libev.a"; sourceTree = "<group>"; };
+		A51734C71E742D8B007DEA9E /* libmbedcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedcrypto.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmbedcrypto.a"; sourceTree = "<group>"; };
+		A51734C81E742D8B007DEA9E /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmbedtls.a"; sourceTree = "<group>"; };
+		A51734C91E742D8B007DEA9E /* libmbedx509.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedx509.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmbedx509.a"; sourceTree = "<group>"; };
+		A51734CA1E742D8B007DEA9E /* libmettle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmettle.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libmettle.a"; sourceTree = "<group>"; };
+		A51734CB1E742D8B007DEA9E /* libsigar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsigar.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libsigar.a"; sourceTree = "<group>"; };
+		A51734CC1E742D8B007DEA9E /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = "../../dev/git/mettle/build/aarch64-iphone-darwin/lib/libz.a"; sourceTree = "<group>"; };
+		A5FD5E6C1E813FD8002CE468 /* libmbedcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedcrypto.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmbedcrypto.a"; sourceTree = "<group>"; };
+		A5FD5E6D1E813FD8002CE468 /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmbedtls.a"; sourceTree = "<group>"; };
+		A5FD5E6E1E813FD8002CE468 /* libmbedx509.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedx509.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmbedx509.a"; sourceTree = "<group>"; };
+		A5FD5E6F1E813FD8002CE468 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libz.a"; sourceTree = "<group>"; };
+		A5FD5E701E813FD8002CE468 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libcurl.a"; sourceTree = "<group>"; };
+		A5FD5E711E813FD8002CE468 /* libcurl.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = libcurl.la; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libcurl.la"; sourceTree = "<group>"; };
+		A5FD5E721E813FD8002CE468 /* libeio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libeio.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libeio.a"; sourceTree = "<group>"; };
+		A5FD5E731E813FD8002CE468 /* libev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libev.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libev.a"; sourceTree = "<group>"; };
+		A5FD5E741E813FD8002CE468 /* libsigar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsigar.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libsigar.a"; sourceTree = "<group>"; };
+		A5FD5E751E813FD8002CE468 /* libdnet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdnet.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libdnet.a"; sourceTree = "<group>"; };
+		A5FD5E761E813FD8002CE468 /* libmettle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmettle.a; path = "../../dev/git/mettle/build/arm-iphone-darwin/lib/libmettle.a"; sourceTree = "<group>"; };
+		A5FE77C81E5553F00091F74C /* payload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = payload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FE77CC1E5553F00091F74C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5FE77CE1E5553F00091F74C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5FE77CF1E5553F00091F74C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5FE77D11E5553F00091F74C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A5FE77D21E5553F00091F74C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A5FE77D51E5553F00091F74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5FE77D71E5553F00091F74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5FE77DA1E5553F00091F74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5FE77DC1E5553F00091F74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5FE77C51E5553F00091F74C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51734CD1E742D8B007DEA9E /* libcurl.a in Frameworks */,
+				A51734CE1E742D8B007DEA9E /* libdnet.a in Frameworks */,
+				A5FD5E771E813FD8002CE468 /* libmbedcrypto.a in Frameworks */,
+				A5FD5E7E1E813FD8002CE468 /* libev.a in Frameworks */,
+				A51734CF1E742D8B007DEA9E /* libeio.a in Frameworks */,
+				A51734D01E742D8B007DEA9E /* libev.a in Frameworks */,
+				A5FD5E7F1E813FD8002CE468 /* libsigar.a in Frameworks */,
+				A51734D11E742D8B007DEA9E /* libmbedcrypto.a in Frameworks */,
+				A5FD5E801E813FD8002CE468 /* libdnet.a in Frameworks */,
+				A5FD5E7A1E813FD8002CE468 /* libz.a in Frameworks */,
+				A51734D21E742D8B007DEA9E /* libmbedtls.a in Frameworks */,
+				A5FD5E781E813FD8002CE468 /* libmbedtls.a in Frameworks */,
+				A51734D31E742D8B007DEA9E /* libmbedx509.a in Frameworks */,
+				A5FD5E7B1E813FD8002CE468 /* libcurl.a in Frameworks */,
+				A51734D41E742D8B007DEA9E /* libmettle.a in Frameworks */,
+				A51734D51E742D8B007DEA9E /* libsigar.a in Frameworks */,
+				A5FD5E811E813FD8002CE468 /* libmettle.a in Frameworks */,
+				A5FD5E7D1E813FD8002CE468 /* libeio.a in Frameworks */,
+				A5FD5E791E813FD8002CE468 /* libmbedx509.a in Frameworks */,
+				A51734D61E742D8B007DEA9E /* libz.a in Frameworks */,
+				A51734AE1E724A47007DEA9E /* CoreMedia.framework in Frameworks */,
+				A51734AC1E724A2C007DEA9E /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5FE77BF1E5553F00091F74C = {
+			isa = PBXGroup;
+			children = (
+				A5FD5E6C1E813FD8002CE468 /* libmbedcrypto.a */,
+				A5FD5E6D1E813FD8002CE468 /* libmbedtls.a */,
+				A5FD5E6E1E813FD8002CE468 /* libmbedx509.a */,
+				A5FD5E6F1E813FD8002CE468 /* libz.a */,
+				A5FD5E701E813FD8002CE468 /* libcurl.a */,
+				A5FD5E711E813FD8002CE468 /* libcurl.la */,
+				A5FD5E721E813FD8002CE468 /* libeio.a */,
+				A5FD5E731E813FD8002CE468 /* libev.a */,
+				A5FD5E741E813FD8002CE468 /* libsigar.a */,
+				A5FD5E751E813FD8002CE468 /* libdnet.a */,
+				A5FD5E761E813FD8002CE468 /* libmettle.a */,
+				A51734C31E742D8B007DEA9E /* libcurl.a */,
+				A51734C41E742D8B007DEA9E /* libdnet.a */,
+				A51734C51E742D8B007DEA9E /* libeio.a */,
+				A51734C61E742D8B007DEA9E /* libev.a */,
+				A51734C71E742D8B007DEA9E /* libmbedcrypto.a */,
+				A51734C81E742D8B007DEA9E /* libmbedtls.a */,
+				A51734C91E742D8B007DEA9E /* libmbedx509.a */,
+				A51734CA1E742D8B007DEA9E /* libmettle.a */,
+				A51734CB1E742D8B007DEA9E /* libsigar.a */,
+				A51734CC1E742D8B007DEA9E /* libz.a */,
+				A51734AD1E724A47007DEA9E /* CoreMedia.framework */,
+				A51734AB1E724A2C007DEA9E /* AVFoundation.framework */,
+				A5FE77CA1E5553F00091F74C /* payload */,
+				A5FE77C91E5553F00091F74C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5FE77C91E5553F00091F74C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5FE77C81E5553F00091F74C /* payload.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5FE77CA1E5553F00091F74C /* payload */ = {
+			isa = PBXGroup;
+			children = (
+				A5FE77CE1E5553F00091F74C /* AppDelegate.h */,
+				A5FE77CF1E5553F00091F74C /* AppDelegate.m */,
+				A5FE77D11E5553F00091F74C /* ViewController.h */,
+				A5FE77D21E5553F00091F74C /* ViewController.m */,
+				A5FE77D41E5553F00091F74C /* Main.storyboard */,
+				A5FE77D71E5553F00091F74C /* Assets.xcassets */,
+				A5FE77D91E5553F00091F74C /* LaunchScreen.storyboard */,
+				A5FE77DC1E5553F00091F74C /* Info.plist */,
+				A5FE77CB1E5553F00091F74C /* Supporting Files */,
+			);
+			path = payload;
+			sourceTree = "<group>";
+		};
+		A5FE77CB1E5553F00091F74C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5FE77CC1E5553F00091F74C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5FE77C71E5553F00091F74C /* payload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5FE77DF1E5553F00091F74C /* Build configuration list for PBXNativeTarget "payload" */;
+			buildPhases = (
+				A5FE77C41E5553F00091F74C /* Sources */,
+				A5FE77C51E5553F00091F74C /* Frameworks */,
+				A5FE77C61E5553F00091F74C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = payload;
+			productName = payload;
+			productReference = A5FE77C81E5553F00091F74C /* payload.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5FE77C01E5553F00091F74C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = TimWrmetasploit;
+				TargetAttributes = {
+					A5FE77C71E5553F00091F74C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = UZ634YEVHB;
+					};
+				};
+			};
+			buildConfigurationList = A5FE77C31E5553F00091F74C /* Build configuration list for PBXProject "payload" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5FE77BF1E5553F00091F74C;
+			productRefGroup = A5FE77C91E5553F00091F74C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5FE77C71E5553F00091F74C /* payload */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5FE77C61E5553F00091F74C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FE77DB1E5553F00091F74C /* LaunchScreen.storyboard in Resources */,
+				A5FE77D81E5553F00091F74C /* Assets.xcassets in Resources */,
+				A5FD5E7C1E813FD8002CE468 /* libcurl.la in Resources */,
+				A5FE77D61E5553F00091F74C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5FE77C41E5553F00091F74C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FE77D31E5553F00091F74C /* ViewController.m in Sources */,
+				A5FE77D01E5553F00091F74C /* AppDelegate.m in Sources */,
+				A5FE77CD1E5553F00091F74C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A5FE77D41E5553F00091F74C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5FE77D51E5553F00091F74C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5FE77D91E5553F00091F74C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5FE77DA1E5553F00091F74C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5FE77DD1E5553F00091F74C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5FE77DE1E5553F00091F74C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5FE77E01E5553F00091F74C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"~/dev/git/mettle/mettle/src",
+					"~/dev/git/mettle/build/arm-iphone-darwin/include",
+					"~/dev/git/mettle/build/aarch64-iphone-darwin/include",
+				);
+				INFOPLIST_FILE = payload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "~/dev/git/mettle/build/arm-iphone-darwin/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = metasploit.payload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Debug;
+		};
+		A5FE77E11E5553F00091F74C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"~/dev/git/mettle/mettle/src",
+					"~/dev/git/mettle/build/arm-iphone-darwin/include",
+					"~/dev/git/mettle/build/aarch64-iphone-darwin/include",
+				);
+				INFOPLIST_FILE = payload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "~/dev/git/mettle/build/arm-iphone-darwin/lib";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = metasploit.payload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5FE77C31E5553F00091F74C /* Build configuration list for PBXProject "payload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FE77DD1E5553F00091F74C /* Debug */,
+				A5FE77DE1E5553F00091F74C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5FE77DF1E5553F00091F74C /* Build configuration list for PBXNativeTarget "payload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FE77E01E5553F00091F74C /* Debug */,
+				A5FE77E11E5553F00091F74C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5FE77C01E5553F00091F74C /* Project object */;
+}
