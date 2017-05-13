@@ -13,7 +13,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(keeprunning) userInfo:nil repeats:YES];
+    
     return YES;
+}
+
+- (void) keeprunning
+{
+    while (true) {
+        sleep(1);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
