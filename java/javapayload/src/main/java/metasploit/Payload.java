@@ -243,13 +243,16 @@ public class Payload extends ClassLoader {
     private final void bootstrap(InputStream rawIn, OutputStream out, String embeddedStageName, String[] stageParameters) throws Exception {
         try {
             final DataInputStream in = new DataInputStream(rawIn);
-            Class clazz;
+            Class clazz = null;
             final Permissions permissions = new Permissions();
             permissions.add(new AllPermission());
             final ProtectionDomain pd = new ProtectionDomain(new CodeSource(new URL("file:///"), new Certificate[0]), permissions);
             if (embeddedStageName == null) {
                 int length = in.readInt();
                 do {
+                    if (length > 4096) {
+                        return; //avoid OutOfMemoryException
+                    }
                     final byte[] classfile = new byte[length];
                     in.readFully(classfile);
                     resolveClass(clazz = defineClass(null, classfile, 0, length, pd));
