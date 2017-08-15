@@ -7,10 +7,26 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.OutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.Key;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.AlgorithmParameterSpec;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
 public abstract class Transport {
     public static final long MS = 1000L;
     public static final int ENC_NONE = 0;
+    public static final int ENC_AES = 1;
 
     private Transport prev;
     private Transport next;
@@ -20,6 +36,9 @@ public abstract class Transport {
     protected long commTimeout;
     protected long retryTotal;
     protected long retryWait;
+
+    private int encryptionMode;
+    private byte[] aesKey;
 
     protected abstract boolean tryConnect(Meterpreter met) throws IOException;
 
@@ -90,6 +109,7 @@ public abstract class Transport {
         in.readFully(body);
 
         // TODO: add decryption support here.
+
 
         // create a complete packet and xor the whole thing. We do this becauase we can't
         // be sure that the content of the body is 4-byte aligned with the xor key, so we
@@ -221,5 +241,66 @@ public abstract class Transport {
     public Transport getNext() {
         return this.next;
     }
+
+    public void setAESkey(byte[] aesKey) {
+        this.aesKey = aesKey;
+    }
+
+    public void setEncryptionMode(int encryptionMode) {
+        this.encryptionMode = encryptionMode;
+    }
+
+    private static final String ENCRYPTION_KEY = "RwcmlVpg";
+    private static final String ENCRYPTION_IV = "4e5Wa71fYoT7MFEX";
+
+    public static byte[] encrypt(byte[] src) {
+        try {
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            cipher.init(Cipher.ENCRYPT_MODE, makeKey(), makeIv());
+            int blockSize = cipher.getBlockSize();
+            System.err.println("blocksize " + blockSize);
+            return cipher.doFinal(src);
+        } catch (GeneralSecurityException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static byte[] decrypt(byte[] src) {
+        try {
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            cipher.init(Cipher.DECRYPT_MODE, makeKey(), makeIv());
+            AlgorithmParameterSpec spec = makeIv();
+            Key key = makeKey();
+            return cipher.doFinal(src);
+        } catch (GeneralSecurityException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    static AlgorithmParameterSpec makeIv() {
+        try {
+            return new IvParameterSpec(ENCRYPTION_IV.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    static Key makeKey() {
+        try {
+//            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            MessageDigest md = MessageDigest.getInstance("RSA");
+
+            byte[] key = md.digest(ENCRYPTION_KEY.getBytes("UTF-8"));
+            return new SecretKeySpec(key, "AES");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
 }
 
