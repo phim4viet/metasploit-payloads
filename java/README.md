@@ -1,4 +1,21 @@
-## Compiling JavaPayload and Java Meterpreter
+## Building the Java and Android Meterpreter
+
+1. Install maven and java, this will depends on your OS:
+e.g:
+```
+brew install maven
+```
+1. Download the [Android SDK](https://developer.android.com/sdk/index.html), and the [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) somewhere
+1. Install API version 10 and 19, and update the "Android SDK Tools" and "Android SDK Platform-tools"
+e.g:
+
+1. Compile android meterpreter:
+
+```
+mvn package -Dandroid.sdk.path=/path/to/android-sdk -Dandroid.ndk.path=/path/to/android-ndk -Dandroid.release=true -P deploy
+```
+
+## Compiling JavaPayload and Java Meterpreter manually
 
 To compile JavaPayload (a Java stager / code loader) and Java Meterpreter for
 Metasploit, you need Maven 3.1 or above (Maven 3.5 works at the time of this
@@ -89,17 +106,6 @@ For NetBeans or IntelliJ IDEA, refer to the documentation at
 
 http://maven.apache.org/netbeans-module.html
 http://maven.apache.org/plugins/maven-idea-plugin/
-
-## Android
-
-1. Download the [Android SDK](https://developer.android.com/sdk/index.html), and the [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) somewhere
-2. Launch the `sdk/tool/android` program
-3. Install API version 10 and 19, and update the "Android SDK Tools" and "Android SDK Platform-tools"
-4. Compile android meterpreter:
-
-```
-mvn package -Dandroid.sdk.path=/path/to/android-sdk -Dandroid.ndk.path=/path/to/android-ndk -Dandroid.release=true -P deploy
-```
 
 
 
