@@ -1,18 +1,28 @@
 ## Building the Java and Android Meterpreter
 
-1. Install maven and java, this will depends on your OS:
-e.g:
-```
-brew install maven
-```
+1. Install maven and java, this will depends on your OS
 1. Download the [Android SDK](https://developer.android.com/sdk/index.html), and the [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) somewhere
 1. Install API version 10 and 19, and update the "Android SDK Tools" and "Android SDK Platform-tools"
-e.g:
-
 1. Compile android meterpreter:
 
 ```
 mvn package -Dandroid.sdk.path=/path/to/android-sdk -Dandroid.ndk.path=/path/to/android-ndk -Dandroid.release=true -P deploy
+```
+
+*e.g for OSX:*
+```
+brew install maven
+
+ANDROID_HOME=/tmp/android
+
+curl "https://dl.google.com/android/repository/sdk-tools-darwin-3859397.zip" -o sdk.zip
+unzip sdk.zip -d $ANDROID_HOME
+yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
+$ANDROID_HOME/tools/bin/sdkmanager "platforms;android-10"
+$ANDROID_HOME/tools/bin/sdkmanager "platforms;android-19"
+$ANDROID_HOME/tools/bin/sdkmanager "ndk-bundle"
+
+mvn package -Dandroid.sdk.path=$ANDROID_HOME -Dandroid.ndk.path=$ANDROID_HOME/ndk-bundle -Dandroid.release=true -P deploy
 ```
 
 ## Compiling JavaPayload and Java Meterpreter manually
