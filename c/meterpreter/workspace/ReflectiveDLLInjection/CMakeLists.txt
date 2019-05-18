@@ -91,12 +91,7 @@ if(MSVC)
 endif(MSVC)
 if(NOT MSVC)
 set(CMAKE_LIBRARY_ARCHITECTURE x64 CACHE STRING "" FORCE)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -target x86_64-w64-windows-gnu -I/usr/x86_64-w64-mingw32/include/ -L/usr/lib/gcc/x86_64-w64-mingw32/8.2.0/include/ -L/usr/x86_64-w64-mingw32/lib -Wfatal-errors -fmsc-version=${_MSC_VER} -fms-extensions -fms-compatibility -fdelayed-template-parsing ")
-    
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I/usr/x86_64-w64-mingw32/include/ -std=c++11")
-   if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-       set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
-   endif()
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -target x86_64-w64-windows-gnu -Wfatal-errors -fmsc-version=${_MSC_VER} -fms-extensions -fms-compatibility -fdelayed-template-parsing ")
 endif(NOT MSVC)
 
 ################ Files ################

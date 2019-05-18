@@ -7,6 +7,10 @@ install-all: \
     install-php \
     install-python
 
+install-windows-mingw:
+	@echo "Installing Windows MinGW payloads"
+	@cp c/meterpreter/output/Release/libmetsrv.so $(METERPDIR)/metsrv.x64.dll
+
 install-windows:
 	@echo "Installing Windows payloads"
 	@if [ -d c/meterpreter/output/x86 ]; then \
