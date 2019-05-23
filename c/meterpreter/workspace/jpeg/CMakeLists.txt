@@ -4,9 +4,10 @@ cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 # Change if you want modify path or other values. #
 ###################################################
 
-set(PROJECT_NAME ext_server_stdapi)
+set(PROJECT_NAME jpeg)
+
 # Output Variables
-set(OUTPUT_DEBUG ../../output/Debug/)
+set(OUTPUT_DEBUG ../../../output/Debug/)
 set(OUTPUT_RELEASE ../../../output/Release/)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_RELEASE})
 
@@ -50,7 +51,42 @@ set(HEADER_DIR_18 ../../source/jpeg-8)
 #        The main options of project        #
 #############################################
 
+# Folders files
+set(CPP_DIR_1 ../../source/jpeg-8)
+set(HEADER_DIR_1 ../../source/jpeg-8)
+
+
+############## CMake Project ################
+#        The main options of project        #
+#############################################
+
 project(${PROJECT_NAME} C)
+
+# Definition of Macros
+add_definitions(
+   -DNDEBUG 
+   -D_WINDOWS 
+   -D_LIB 
+   -DUSE_DLL 
+   -DMETERPRETER_EXPORTS 
+   -D_CRT_SECURE_NO_WARNINGS
+   -D__GNUC__
+)
+
+
+############## Artefacts Output #################
+# Defines outputs , depending Debug or Release. #
+#################################################
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${OUTPUT_DEBUG}")
+  set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${OUTPUT_DEBUG}")
+  set(CMAKE_EXECUTABLE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${OUTPUT_DEBUG}")
+else()
+  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_RELEASE}")
+  set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_RELEASE}")
+  set(CMAKE_EXECUTABLE_OUTPUT_DIRECTORY "${OUTPUT_RELEASE}")
+endif()
 
 # Define Release by default.
 if(NOT CMAKE_BUILD_TYPE)
@@ -58,68 +94,14 @@ if(NOT CMAKE_BUILD_TYPE)
   message(STATUS "Build type not specified: Use Release by default.")
 endif(NOT CMAKE_BUILD_TYPE)
 
-# Definition of Macros
-add_definitions(
-   -D__GNUC__
-   -DNDEBUG 
-   -D__in=SAL__in
-   -D__inout=SAL__inout
-   -D__out_bcount_part_opt=SAL__out_bcount_part_opt
-   -D__in_ecount=SAL__in_ecount
-   -DHAVE_BOOLEAN
-   -DMTP_EXTENSION
-   #-DUSE_DLL
-
-
-
-)
-
-############## Artefacts Output #################
-# Defines outputs , depending Debug or Release. #
-#################################################
-
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_DEBUG}")
-  set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_DEBUG}")
-  set(CMAKE_EXECUTABLE_OUTPUT_DIRECTORY "${OUTPUT_DEBUG}")
-else()
-  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_RELEASE}")
-  set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_RELEASE}")
-  set(CMAKE_EXECUTABLE_OUTPUT_DIRECTORY "${OUTPUT_RELEASE}")
-endif()
-
-################### Dependencies ##################
-# Add Dependencies to project.                    #
-###################################################
-
-option(BUILD_DEPENDS 
-   "Build other CMake project." 
-   OFF 
-)
-
-# Dependencies : disable BUILD_DEPENDS to link with lib already build.
-if(BUILD_DEPENDS)
-   #add_subdirectory(../backcompat ${OUTPUT_RELEASE})
-   add_subdirectory(../../common ${OUTPUT_RELEASE})
-   add_subdirectory(../../ReflectiveDLLInjection ${OUTPUT_RELEASE})
-   add_subdirectory(../../metsrv ${OUTPUT_RELEASE})
-else()
-   #add_subdirectory(../metsrv ${OUTPUT_RELEASE})
-   link_directories(${OUTPUT_RELEASE})
-   link_directories(../../output/Release)
-endif()
-
 ################# Flags ################
 # Defines Flags for Windows and Linux. #
 ########################################
 SET(CMAKE_SYSTEM_NAME Windows)
-
-
 include(CMakeForceCompiler)
 IF("${GNU_HOST}" STREQUAL "")
     SET(GNU_HOST x86_64-w64-mingw32)
 ENDIF()
-
 # Prefix detection only works with compiler id "GNU"
 CMAKE_FORCE_C_COMPILER(${GNU_HOST}-gcc GNU)
 # CMake doesn't automatically look for prefixed 'windres', do it manually:
@@ -128,85 +110,84 @@ SET(CMAKE_RC_COMPILER ${GNU_HOST}-windres)
 set( _MSC_VER 1910 )
 SET(CMAKE_C_COMPILER clang)
 
-
 if(MSVC)
    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /W3 /EHsc")
    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /W3 /EHsc")
 endif(MSVC)
 if(NOT MSVC)
-set(CMAKE_LIBRARY_ARCHITECTURE x64 CACHE STRING "" FORCE)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -target x86_64-w64-windows-gnu -Wfatal-errors -fmsc-version=${_MSC_VER} -fms-extensions -fms-compatibility -fdelayed-template-parsing ")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -target x86_64-w64-windows-gnu")
-#SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -delayload -undefined dynamic_lookup")
-#set (CMAKE_SHARED_LINKER_FLAGS "-Wl,--as-needed -delayload -undefined dynamic_lookup")
+   set(CMAKE_LIBRARY_ARCHITECTURE x64 CACHE STRING "" FORCE)
+   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -target x86_64-w64-windows-gnu -Wfatal-errors -fmsc-version=${_MSC_VER} -fms-extensions -fms-compatibility -fdelayed-template-parsing ")
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -target x86_64-w64-windows-gnu")
 endif(NOT MSVC)
+
 
 ################ Files ################
 #   --   Add files to project.   --   #
 #######################################
 
 file(GLOB SRC_FILES
-    ${CPP_DIR_1}/*.c
-    ${CPP_DIR_1}/*.cpp
-    ${CPP_DIR_2}/*.c
-    ${CPP_DIR_2}/*.cpp
-    ${CPP_DIR_3}/*.c
-    ${CPP_DIR_3}/*.cpp
-    ${CPP_DIR_4}/*.c
-    ${CPP_DIR_4}/*.cpp
-    ${CPP_DIR_5}/*.c
-    ${CPP_DIR_5}/*.cpp
-    ${CPP_DIR_6}/*.c
-    ${CPP_DIR_6}/*.cpp
-    ${CPP_DIR_7}/*.c
-    ${CPP_DIR_7}/*.cpp
-    ${CPP_DIR_8}/*.c
-    ${CPP_DIR_8}/*.cpp
-    ${CPP_DIR_9}/*.c
-    ${CPP_DIR_9}/*.cpp
-    ${CPP_DIR_10}/*.c
-    ${CPP_DIR_10}/*.cpp
-    ${CPP_DIR_11}/*.c
-    ${CPP_DIR_11}/*.cpp
-    ${CPP_DIR_12}/*.c
-    ${CPP_DIR_12}/*.cpp
-    ${CPP_DIR_13}/*.c
-    ${CPP_DIR_13}/*.cpp
-    ${CPP_DIR_14}/*.c
-    ${CPP_DIR_14}/*.cpp
-    ${CPP_DIR_15}/*.c
-    ${CPP_DIR_15}/*.cpp
+	${CPP_DIR_1}/jaricom.c
+	${CPP_DIR_1}/jcapimin.c
+	${CPP_DIR_1}/jcapistd.c
+	${CPP_DIR_1}/jcarith.c
+	${CPP_DIR_1}/jccoefct.c
+	${CPP_DIR_1}/jccolor.c
+	${CPP_DIR_1}/jcdctmgr.c
+	${CPP_DIR_1}/jchuff.c 
+	${CPP_DIR_1}/jcinit.c 
+	${CPP_DIR_1}/jcmainct.c
+	${CPP_DIR_1}/jcmarker.c
+	${CPP_DIR_1}/jcmaster.c
+	${CPP_DIR_1}/jcomapi.c
+	${CPP_DIR_1}/jcparam.c
+	${CPP_DIR_1}/jcprepct.c
+	${CPP_DIR_1}/jcsample.c
+	${CPP_DIR_1}/jctrans.c
+	${CPP_DIR_1}/jdapimin.c
+	${CPP_DIR_1}/jdapistd.c
+	${CPP_DIR_1}/jdarith.c
+	${CPP_DIR_1}/jdatadst.c
+	${CPP_DIR_1}/jdatasrc.c
+	${CPP_DIR_1}/jdcoefct.c
+	${CPP_DIR_1}/jdcolor.c
+	${CPP_DIR_1}/jddctmgr.c
+	${CPP_DIR_1}/jdhuff.c
+	${CPP_DIR_1}/jdinput.c
+	${CPP_DIR_1}/jdmainct.c
+	${CPP_DIR_1}/jdmarker.c
+	${CPP_DIR_1}/jdmaster.c
+	${CPP_DIR_1}/jdmerge.c
+	${CPP_DIR_1}/jdpostct.c
+	${CPP_DIR_1}/jdsample.c
+	${CPP_DIR_1}/jdtrans.c
+	${CPP_DIR_1}/jerror.c
+	${CPP_DIR_1}/jfdctflt.c
+	${CPP_DIR_1}/jfdctfst.c
+	${CPP_DIR_1}/jfdctint.c
+	${CPP_DIR_1}/jidctflt.c
+	${CPP_DIR_1}/jidctfst.c
+	${CPP_DIR_1}/jidctint.c
+	${CPP_DIR_1}/jmemmgr.c
+	${CPP_DIR_1}/jmemnobs.c
+	${CPP_DIR_1}/jquant1.c
+	${CPP_DIR_1}/jquant2.c
+	${CPP_DIR_1}/jutils.c
+
+	${HEADER_DIR_1}/jconfig.h
+	${HEADER_DIR_1}/jdct.h
+	${HEADER_DIR_1}/jerror.h
+	${HEADER_DIR_1}/jinclude.h
+	${HEADER_DIR_1}/jmemsys.h
+	${HEADER_DIR_1}/jmorecfg.h
+	${HEADER_DIR_1}/jpegint.h
+	${HEADER_DIR_1}/jpeglib.h
+	${HEADER_DIR_1}/jversion.h
 )
 
 include_directories( ${HEADER_DIR_1} )
-include_directories( ${HEADER_DIR_2} )
-include_directories( ${HEADER_DIR_3} )
-include_directories( ${HEADER_DIR_4} )
-include_directories( ${HEADER_DIR_5} )
-include_directories( ${HEADER_DIR_6} )
-include_directories( ${HEADER_DIR_7} )
-include_directories( ${HEADER_DIR_8} )
-include_directories( ${HEADER_DIR_9} )
-include_directories( ${HEADER_DIR_10} )
-include_directories( ${HEADER_DIR_11} )
-include_directories( ${HEADER_DIR_12} )
-include_directories( ${HEADER_DIR_13} )
-include_directories( ${HEADER_DIR_14} )
-include_directories( ${HEADER_DIR_15} )
-include_directories( ${HEADER_DIR_16} ) #ReflectiveDLLInjection
-include_directories( ${HEADER_DIR_17} )
-include_directories( ${HEADER_DIR_18} )
 
-set( CMAKE_C_COMPILE_OPTIONS_PIC "" ) 
-
-add_library(${PROJECT_NAME} SHARED
+# Add library to build.
+add_library(${PROJECT_NAME} STATIC
    ${SRC_FILES}
 )
 
-link_directories(/usr/x86_64-w64-mingw32/lib/)
-
-# Link with other dependencies.
-target_link_libraries(${PROJECT_NAME} common ReflectiveDLLInjection jpeg psapi winmm iphlpapi shlwapi ws2_32 odbc32 odbccp32 mpr crypt32 wininet winhttp ole32 netapi32)
-if(MSVC)
-   target_link_libraries(${PROJECT_NAME} psapi.lib winmm.lib backcompat.lib iphlpapi.lib shlwapi.lib ws2_32.lib odbc32.lib odbccp32.lib metsrv.lib jpeg.lib )
-endif(MSVC)

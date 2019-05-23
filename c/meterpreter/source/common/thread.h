@@ -45,6 +45,8 @@ typedef struct _EVENT
 
 #define THREADCALL __stdcall
 
+struct _THREAD;
+
 typedef DWORD (THREADCALL * THREADFUNK)(struct _THREAD * thread);
 
 struct _THREAD

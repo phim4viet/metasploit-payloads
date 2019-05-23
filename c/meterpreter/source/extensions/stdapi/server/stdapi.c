@@ -7,6 +7,7 @@
 // include the Reflectiveloader() function, we end up linking back to the metsrv.dll's Init function
 // but this doesnt matter as we wont ever call DLL_METASPLOIT_ATTACH as that is only used by the
 // second stage reflective dll inject payload and not the metsrv itself when it loads extensions.
+#define REFLECTIVEDLLINJECTION_NO_INIT
 #include "../../../ReflectiveDLLInjection/dll/src/ReflectiveLoader.c"
 
 // NOTE: _CRT_SECURE_NO_WARNINGS has been added to Configuration->C/C++->Preprocessor->Preprocessor

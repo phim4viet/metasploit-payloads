@@ -10,6 +10,7 @@ install-all: \
 install-windows-mingw:
 	@echo "Installing Windows MinGW payloads"
 	@cp c/meterpreter/output/Release/libmetsrv.so $(METERPDIR)/metsrv.x64.dll
+	@cp c/meterpreter/output/Release/libext_server_stdapi.so $(METERPDIR)/ext_server_stdapi.x64.dll
 
 install-windows:
 	@echo "Installing Windows payloads"
