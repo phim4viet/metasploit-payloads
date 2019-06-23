@@ -25,6 +25,7 @@ public class Loader implements ExtensionLoader {
         mgr.registerCommand("core_set_session_guid", core_set_session_guid.class);
         mgr.registerCommand("core_patch_url", core_patch_url.class);
         mgr.registerCommand("core_shutdown", core_shutdown.class);
+        mgr.registerCommand("core_negotiate_tlv_encryption", core_negotiate_tlv_encryption.class, V1_6);
         mgr.registerCommand("core_transport_set_timeouts", core_transport_set_timeouts.class);
         mgr.registerCommand("core_transport_list", core_transport_list.class);
         mgr.registerCommand("core_transport_add", core_transport_add.class);
