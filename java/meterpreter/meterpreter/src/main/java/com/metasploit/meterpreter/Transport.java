@@ -12,6 +12,7 @@ import java.io.IOException;
 public abstract class Transport {
     public static final long MS = 1000L;
     public static final int ENC_NONE = 0;
+    public static final int ENC_AES = 1;
 
     private Transport prev;
     private Transport next;
@@ -21,6 +22,8 @@ public abstract class Transport {
     protected long commTimeout;
     protected long retryTotal;
     protected long retryWait;
+
+    private int encryptionMode = ENC_NONE;
 
     protected abstract boolean tryConnect(Meterpreter met) throws IOException;
 
@@ -110,7 +113,7 @@ public abstract class Transport {
         this.arrayCopy(sessionGUID, 0, packet, 4, sessionGUID.length);
 
         // We don't currently support encryption
-        this.writeInt(packet, 20, ENC_NONE);
+        this.writeInt(packet, 20, encryptionMode);
 
         // Write the length/type
         this.writeInt(packet, 24, data.length + 8);
